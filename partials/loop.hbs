@@ -14,6 +14,7 @@
         <p><a href="https://www.linkedin.com/in/%E5%90%9B%E5%85%B0-%E6%9D%A8-61033912b/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMgZOr7NCBp5DBEqMGhERY5vJUCT4i_iDPh7Tvz8pVQkeQnQgz" width="30" /></a>&nbsp;
             <a href="https://www.facebook.com/Adede.ml"><img width="30" src="https://www.facebook.com/images/fb_icon_325x325.png"></a>            &nbsp;<a href="https://twitter.com/AYAdeleYang"><img width="33" src="http://www.freeiconspng.com/uploads/twitter-icon-9.png"></a>&nbsp;
             <a href="https://www.instagram.com/adeleascloud/"><img width="34" src="https://www.seeklogo.net/wp-content/uploads/2016/05/instagram-icon-logo-vector-download.jpg"></a>
+            <a target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/LU44XVJFWRTR/"><img width="200" src="https://rctom.hbs.org/wp-content/uploads/sites/4/2016/11/coursera-logo-nobg.png"/></a>
         </p>
         <p><a href="http://aidesign.b0.upaiyun.com/Adele-cv.pdf" target="_blank" class="btn btn-resume">My Resume</a></p>
     </section>
@@ -22,14 +23,18 @@
 <div class="post" id="work">
     <h1 style="text-align:center;">Work</h1>
     <article class='gallery'>
-        {{#foreach posts}} {{#if image}}
+        {{#foreach posts}}
+        {{#if image}}
+        {{#unless tags}}
         <a class='gallery-link' href='{{image}}'>
             <figure class='gallery-image'>
                 <img height='1400' src='{{image}}' width='1000'>
                 <figcaption>{{title}}</figcaption>
             </figure>
         </a>
-        {{/if}} {{/foreach}}
+        {{/unless}}
+        {{/if}}
+        {{/foreach}}
     </article>
 </div>
 
