@@ -2,7 +2,19 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{!-- The big featured header --}}
-<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+
+<div class="homepage-banner">
+    <div class="animation-container">
+        <div class="mask"></div>
+        <video autoplay loop class="fillScreen" poster="http://aidesign.b0.upaiyun.com/adede.ml/animate-bg.jpg">
+            <source src="http://aidesign.b0.upaiyun.com/adede.ml/train.mp4" type="video/mp4" />
+            <source src="http://aidesign.b0.upaiyun.com/adede.ml/animate-bg.webm" type="video/webm" />Please upgrade your browser, it does not support the video tag. 
+        </video>
+    </div>
+</div>
+
+{{!-- <header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}"> --}}
+<header class="main-header" style="position:absolute; z-index:100; top:0; background-color:transparent;">
     <nav class="main-nav overlay clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
         {{#if @blog.navigation}}
